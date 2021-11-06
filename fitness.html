@@ -1,0 +1,729 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Oswald&display=swap" rel="stylesheet">
+
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+         'sm': '640px',
+           // => @media (min-width: 640px) { ... }
+
+          'md': '768px',
+            // => @media (min-width: 768px) { ... }
+
+          'lg': '1024px',
+           // => @media (min-width: 1024px) { ... }
+
+          'xl': '1280px',
+           // => @media (min-width: 1280px) { ... }
+
+           },
+           container: {
+             center: true,
+             padding: '2rem'
+           },
+
+          extend: {
+            colors: {
+              white:'#ffffff',
+              gray: {
+                default: "#333333",
+              },
+              danger :'#F06E38'
+              
+            },
+          },
+
+          backgroundColor: (theme) => ({
+            white: "#ffffff",
+            danger: "#F06E38",
+            gray:{
+              dark:'#111111'
+            },
+            blue:{
+              default: '#0D1337',
+              light : '#202753'
+            }
+          }),
+
+          borderColor: (theme) => ({
+            danger: "rgba(252, 165, 165)",
+            white : "#ffffff",
+            secondary: 'rgba(229, 231, 235)',
+          }),
+          fontFamily: {
+            display :[' Oswald '],
+            body: [ 'Mulish'],
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      h5{
+        @apply font-display tracking-widest uppercase;
+      }
+      .btn {
+        @apply font-bold py-3 px-8 rounded-full;
+          }
+
+      .btn-white{
+        @apply   border border-secondary tracking-wider	 text-sm uppercase text-white;
+      }
+      .btn-danger{
+        @apply  tracking-wider border border-danger text-sm uppercase text-danger;
+      }
+      .btn-danger-dark{
+        @apply  tracking-wider bg-danger text-sm uppercase text-white;
+      }
+      .btn-dark{
+        @apply w-44 tracking-wider bg-gray-dark text-sm uppercase text-white;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="font-body  text-white">
+    <!-- nav-section -->
+    <section class=" py-5  bg-danger bg-cover" >
+        <header class="container flex items-center py-5 justify-between items-center">
+          <div class="">
+            <h1 class="text-4xl font-black uppercase tracking-wider">
+              ftn
+            </h1>    
+                </div>
+
+              <nav class="hidden lg:block xl:block text-base">
+                <div >
+                  <ul class="flex space-x-14">
+                    <li><a class="text-base tracking-wider cursor-pointer">About</a></li>
+                    <li><a class="text-base tracking-wider cursor-pointer">Features</a>
+                    </li>
+                    <li>
+                      <a class="text-base tracking-wider cursor-pointer">Services</a>
+                    </li>
+                    <li>
+                      <a class="text-base tracking-wider">Pricing</a>
+                    </li>
+                    <li>
+                      <a class="text-base tracking-wider">Blog</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>        
+
+             <div>
+              <button
+              class="hidden lg:block xl:block
+                 btn btn-white">
+              contact
+            </button>
+             </div>
+              
+          <div class="lg:hidden xl:hidden block">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white bg-danger rounded-full p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
+         </header>
+
+         <div class="container">
+        <div
+          class="
+            grid grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-2
+            xl:grid-cols-2
+            gap-4 xl:gap-24
+            py-20
+            justify-between
+            items-center
+          "
+        >
+          <div class="flex flex-col justify-between space-y-8">
+              <h5 class="uppercase font-display font-base">Fitness</h5>
+                <h2 class="text-[40px] md:text-[56px]  tracking-tight leading-tight font-black max-w-[15rem] md:max-w-[21rem]">Balance Body & Mind</h2>
+              <p class="text-xl leading-relaxed max-w-lg">Fitness is the condition of being physically fit and healthy and involves attributes.</p>
+             <button
+              class="btn btn-dark mt-10">
+              Get Started            </button>
+            </div>
+           
+           <div class="md:order-2 order-first">
+            <img src="https://images2.imgbox.com/1a/14/6txP8jxE_o.png" alt="pic-2" border="0">          
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class=" w-full" >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-full"viewBox="0 0 1440 139" fill="none">
+          <path d="M0 69.5C0 69.5 198.105 45.3124 335.734 52.9922C715.011 74.1561 796.634 138.569 1033.81 127.188C1348.77 112.073 1440 0 1440 0V139H0V69.5Z" fill="#0D1337"/>
+          </svg>  
+            </div>
+
+      </section>
+
+
+    <section class=" bg-blue-default -mt-6">
+      <div class="container py-20">        
+      <div class="  text-center  ">
+        <div class="flex-col items-center text-center space-y-6 py-16">
+             <h5 class="uppercase font-base">Our Classes</h5>
+             <h2 class=" md:text-[56px] text-[40px] leading-tight tracking-tight font-black lg:px-24 xl:px-56 sm:px-14 ">Choose Your Classes and 
+              Start Your Training</h2>
+            <p class="text-xl font-normal leading-relaxed lg:px-40 xl:px-72 md:px-14 px-10">Cardiorespiratory endurance, muscular strength, muscular endurance, body composition, and flexibility.</p>
+          </div>
+
+          <div class="grid gap-10 text-left">
+          <div class="grid grid-cols-1 items-center">
+            <div class="relative ">
+              <img class="md:h-auto h-96 w-full" src='https://images2.imgbox.com/78/63/ULDIlo8v_o.png' >
+              <div class="absolute sm:left-20 left-10 xl:top-64 lg:top-36 md:top-16 top-16 flex-col items-center lg:space-y-6 space-y-2 ">
+                <h5 class="uppercase font-base">Improve Health </h5>
+                <h2 class="max-w-[14rem] text-[40px] leading-tight tracking-tight font-black ">Outdoor
+                  Classes</h2>
+                  <p class="py-2 md:max-w-sm max-w-xs text-base font-normal leading-loose">Condition of being physically fit and healthy and involves attributes that include.</p>
+                  <p class="  tracking-wide ">Learn More</p>
+                </div>
+               </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                <div class="relative ">
+                  <img class="w-full sm:h-auto h-96" src='https://images2.imgbox.com/4b/2c/lEjcSN2y_o.png' >
+                  <div class="absolute sm:left-20 left-10 xl:top-96 lg:top-64 md:top-32  sm:top-96 top-28 flex-col items-center space-y-6 ">
+                    <h5 class="uppercase font-base">mental relief </h5>
+                    <h2 class="max-w-[14rem] text-[40px] leading-tight tracking-tight font-black "> Personal
+                      Training</h2>
+                      <p class="  tracking-wide ">Learn More</p>
+                    </div>
+                   </div>
+                   <div class="relative ">
+                    <img class="w-full sm:h-auto h-96" src='https://images2.imgbox.com/19/e0/9cyJG1bV_o.png' >
+                    <div class="absolute sm:left-20 left-10 xl:top-96 lg:top-64 md:top-32 sm:top-96 top-28 flex-col items-center space-y-6 ">
+                      <h5 class="uppercase font-base">Better mood </h5>
+                      <h2 class="max-w-[14rem] text-[40px] leading-tight tracking-tight font-black ">Group
+                        Training
+                        </h2>
+                        <p class="  tracking-wide ">Learn More</p>
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="my-10 mx-auto">
+                    <button class=" btn btn-white"> Browser All</button>
+                  </div>
+                 </div>
+
+
+       <!-- ABOUT-SECTION -->
+       <section class=" py-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20 xl:gap-36 pt-20">
+            <div>
+              <img src="https://images2.imgbox.com/b4/a8/7hkV0Bz6_o.png" class="w-full h-full">
+            </div>
+            <div class="flex-col items-center lg:space-y-6 space-y-4 ">
+              <h5 class="uppercase font-base">About </h5>
+              <h2 class="lg:max-w-sm max-w-[16rem] lg:text-[56px] text-[40px] leading-tight tracking-tight font-black ">Be Physically 
+                Fit & Healthy</h2>
+                <p class="py-2 md:max-w-sm max-w-xs text-base font-normal leading-loose">
+                  Being physically fit and healthy and involves attributes that include, but are not limited to mental acuity, cardiorespiratory endurance.                  </p>
+                  <button class=" btn btn-white">About Us</button>
+              </div>
+          </div> 
+         </section>
+
+        <!-- FEATURE-SECTION -->
+
+         <section class="text-center  pt-20">
+           <div class="md:pt-20 pt:10 pb-12">
+            <h5 class="uppercase font-base">Features </h5>
+            <h2 class="lg:text[56px] text-[40px] leading-tight tracking-tight font-black pt-5">Improve Your 
+              <br><span>Health</span> </h2>
+           </div>
+           <div class="grid grid-cols-1 md:grid-cols-4 xl:gap-10 lg:gap-6 md:gap-12 gap-10 items-center ">
+            <div class="flex-cols space-y-4 lg:px-0 md:px-3 px-8">
+              <div class="">
+              <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M66.6103 18.2334L69.3993 15.4444C70.2002 14.6435 70.2002 13.3451 69.3993 12.5442L64.8776 8.02246L69.3993 3.50089C70.2002 2.69999 70.2002 1.40157 69.3993 0.600674C68.5986 -0.200225 67.3 -0.200225 66.4991 0.600674L61.9774 5.12224L57.456 0.600674C56.6552 -0.200225 55.3566 -0.200225 54.5557 0.600674L51.7667 3.38974L66.6103 18.2334ZM3.38974 51.7666L0.600675 54.5557C-0.200225 55.3566 -0.200225 56.655 0.600675 57.4559L5.12238 61.9776L0.600675 66.4992C-0.200225 67.3001 -0.200225 68.5985 0.600675 69.3994C1.00099 69.7998 1.52585 70 2.05072 70C2.57558 70 3.10045 69.7998 3.50076 69.3993L8.02247 64.8777L12.5442 69.3993C12.9446 69.7997 13.4695 70 13.9942 70C14.5189 70 15.0439 69.7998 15.4443 69.3993L18.2333 66.6102L3.38974 51.7666ZM46.254 3.67753L66.3225 23.7461C67.9217 25.3453 67.9217 27.9473 66.3226 29.5465L61.5666 34.3026C60.767 35.1022 59.7167 35.502 58.6663 35.502C57.6161 35.502 56.5656 35.1022 55.7661 34.3026L47.1819 25.7184L25.7184 47.1819L34.3026 55.7661C35.9018 57.3653 35.9018 59.9673 34.3026 61.5665L29.5466 66.3225C28.747 67.1222 27.6966 67.522 26.6463 67.522C25.5961 67.522 24.5456 67.1222 23.7461 66.3225L3.67754 46.254C2.07833 44.6548 2.07833 42.0527 3.67754 40.4535L8.43358 35.6975C10.0326 34.0984 12.635 34.0983 14.234 35.6975L22.8182 44.2817L44.2817 22.8182L35.6975 14.234C34.0983 12.6348 34.0983 10.0328 35.6975 8.43357L40.4536 3.67753C42.0527 2.0782 44.655 2.07833 46.254 3.67753Z" fill="#F06E38"/>
+                </svg>
+              </div>
+              <h4 class=" font-black text-2xl">Physical Exercises</h4>
+              <p class="py-2 text-gray-500 text-base font-normal leading-loose">
+                Fitness is the condition of being physically fit and healthy and involves attributes.</p>
+            </div>
+            <div class="flex-cols space-y-4  lg:px-0 md:px-3 px-8">
+              <div class="">
+                <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M55.8936 5.71015C54.7139 8.79407 53.6857 11.4819 53.3489 12.4414H16.6511C16.2723 11.3543 15.2666 8.73021 14.0997 5.68557C13.4005 3.86133 12.6435 1.8861 11.9287 0H58.0713C57.369 1.85308 56.6038 3.8534 55.8936 5.71015ZM14 33.5236C14.369 32.6621 14.8207 31.8418 15.3534 30.9803C15.3534 30.9395 15.3944 30.8574 15.4354 30.8163C18.6348 25.4434 19.0038 21.2188 17.8968 16.543H52.1032C51.0367 21.2188 51.6115 25.8534 54.5645 30.8164C54.6056 30.8574 54.6466 30.9395 54.6466 30.9803C55.1794 31.8418 55.631 32.6621 56 33.5236C56.4512 34.3438 56.8207 35.2051 57.1076 36.0665C57.4766 36.9689 57.7639 37.9121 58.0098 38.8146C51.4884 40.3732 43.1211 41.1525 35 41.1525C26.8789 41.1525 18.4706 40.3732 11.9492 38.8146C12.195 37.9121 12.5234 36.9688 12.8924 36.0665C13.1794 35.2051 13.5488 34.3438 14 33.5236ZM37.0508 32.9492H32.9492V37.0508H37.0508V32.9492ZM4.92174 36.4766C5.82395 35.123 7.56082 33.9336 9.69377 32.9082C10.3496 31.5135 11.0466 30.1191 11.9083 28.7245C12.3184 28.0684 12.6057 27.453 12.8927 26.8379C7.39662 28.0273 2.21498 29.9549 0.574219 32.9082C1.35379 34.2617 2.87096 35.4512 4.92174 36.4766ZM0 38.3193C8.04494 44.427 26.079 45.2539 35 45.2539C43.921 45.2539 61.9551 44.427 70 38.3193V43.2031C70 51.3141 47.0604 53.457 35 53.457C22.9396 53.457 0 51.3141 0 43.2031V38.3193ZM15.2932 64.496C15.7418 65.7897 17.1157 70 17.1157 70H32.9492V57.5426C27.3837 57.463 19.513 57.0314 12.4544 55.5196C13.2355 58.4629 14.2319 61.4276 15.2932 64.496ZM37.0508 70H52.8843C52.8843 70 54.2341 65.8599 54.6748 64.5921C55.7493 61.4964 56.7546 58.5048 57.5401 55.5208C50.482 57.0317 42.6154 57.463 37.0508 57.5426V70ZM60.2247 32.9082C59.6504 31.5135 58.9534 30.1191 58.0918 28.7245C57.6818 28.0684 57.3944 27.453 57.1076 26.838C62.6035 28.0684 67.785 29.9549 69.4258 32.9082C68.6462 34.2619 67.1292 35.4512 65.0784 36.4355C64.1352 35.0819 62.3983 33.8926 60.2654 32.9082H60.2247Z" fill="#F06E38"/>
+                  </svg>              </div>
+              <h4 class=" font-black text-2xl">Healthy Diet </h4>
+              <p class="py-2 text-gray-500 text-base font-normal leading-loose">
+                Physically fit and healthy and involves attributes that include, but are not limited to mental acuity.</p>
+            </div>
+            <div class="flex-cols space-y-4 lg:px-0 md:px-3 px-8">
+              <div class="">
+                <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="77" height="70" viewBox="0 0 77 70" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M61.0586 13.5484C64.7962 13.5484 67.8262 10.5155 67.8262 6.7742C67.8262 3.03291 64.7962 0 61.0586 0C57.321 0 54.291 3.03291 54.291 6.7742C54.291 10.5155 57.321 13.5484 61.0586 13.5484ZM36.4378 4.71032C37.958 3.18884 40.3372 2.9528 42.1304 4.14581L50.4666 9.92269C49.5157 10.3699 48.6461 10.9427 47.9089 11.6807L43.5015 16.0923L40.2029 13.7138L30.4106 23.5156C28.6482 25.2798 25.793 25.2799 24.0306 23.5158C22.2682 21.7516 22.2682 18.8938 24.0306 17.1297L36.4378 4.71032ZM18.1973 6.7742H6.76758C5.52069 6.7742 4.51172 7.78415 4.51172 9.03226C4.51172 10.2804 5.52069 11.2903 6.76758 11.2903H18.1973C19.4442 11.2903 20.4531 10.2804 20.4531 9.03226C20.4531 7.78415 19.4442 6.7742 18.1973 6.7742ZM18.1973 24.8387H6.76758C5.52069 24.8387 4.51172 25.8487 4.51172 27.0968C4.51172 28.3449 5.52069 29.3548 6.76758 29.3548H18.1973C19.4442 29.3548 20.4531 28.3449 20.4531 27.0968C20.4531 25.8487 19.4442 24.8387 18.1973 24.8387ZM2.25586 15.8065H13.6855C14.9324 15.8065 15.9414 16.8164 15.9414 18.0645C15.9414 19.3126 14.9324 20.3226 13.6855 20.3226H2.25586C1.00897 20.3226 0 19.3126 0 18.0645C0 16.8164 1.00897 15.8065 2.25586 15.8065ZM72.4883 27.0968H58.8027V18.0645C58.8027 14.0985 53.9558 12.0102 51.0997 14.8728L33.0542 32.936C31.2918 34.7001 31.2918 37.5579 33.0542 39.3221L43.3994 49.6774L30.7983 62.2908C29.0359 64.055 29.0359 66.9128 30.7983 68.6769C32.5606 70.4409 35.4158 70.4411 37.1782 68.6769L52.9692 52.8705C54.7317 51.1063 54.7317 48.2485 52.9692 46.4844L42.624 36.129L49.7793 28.9668V31.6129C49.7793 34.1069 51.7995 36.129 54.291 36.129H72.4883C74.9798 36.129 77 34.1069 77 31.6129C77 29.119 74.9798 27.0968 72.4883 27.0968ZM29.8643 42.5152C28.7212 41.3709 27.9581 39.9626 27.5558 38.4398L3.72803 62.2908C1.96561 64.055 1.96561 66.9128 3.72803 68.6769C5.49031 70.4409 8.34548 70.4411 10.1079 68.6769L33.0542 45.7082L29.8643 42.5152Z" fill="#F06E38"/>
+                  </svg>              </div>
+              <h4 class=" font-black text-2xl">Mental Benefits </h4>
+              <p class="py-2 text-gray-500 text-base font-normal leading-loose">
+                Healthy and involves attributes that include, but are not limited to mental acuity, cardiorespiratory.</p>
+            </div>
+            <div class="flex-cols space-y-4  lg:px-0 md:px-3  px-8">
+              <div class="">
+                <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="70" height="45" viewBox="0 0 70 45" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M63.7368 0C60.433 0 57.6895 2.56287 57.4862 5.84294C57.0666 12.6129 55.5901 13.8974 51.3655 14.3197C48.488 14.6071 46.0921 13.9693 44.438 12.4739C42.8174 11.0088 41.931 8.75718 41.9422 6.13402C41.9459 5.29487 41.4341 4.53852 40.6514 4.22616C39.8686 3.91407 38.9737 4.10885 38.3935 4.71816C38.3301 4.78486 34.7124 8.55025 29.6187 12.1562L37.5309 20.0302L34.6234 22.9237L26.1062 14.4475C24.7283 15.2671 23.2894 16.0267 21.8195 16.6708L29.3071 24.1222L26.3996 27.0157L17.5015 18.1606C17.0639 18.2678 16.6255 18.3621 16.1884 18.439C4.48962 20.4937 0.242601 26.9766 0 32.7302H51.8059C52.455 29.7896 53.8886 27.4153 56.0872 25.6596C60.6804 21.9916 67.0255 22.406 68.0464 22.5H69.9999V6.23305C69.9999 2.80225 67.1902 0 63.7368 0ZM10.3777 45H67.9439C69.0795 45 69.9999 44.0839 69.9999 42.954V36.8223H0.308391C1.26646 41.4826 5.41616 45 10.3777 45ZM67.7095 26.5788L67.71 26.5788C67.8358 26.5934 67.8635 26.5933 68.3812 26.5922C68.6958 26.5916 69.1914 26.5906 70 26.5922V32.7303H56.0531C56.5553 31.1313 57.4111 29.8547 58.6436 28.865C62.1808 26.0246 67.6323 26.5711 67.7095 26.5788Z" fill="#F06E38"/>
+                  </svg>              </div>
+              <h4 class=" font-black text-2xl">Prolongs Your Life</h4>
+              <p class="py-2 text-gray-500 text-base font-normal leading-loose">
+                Endurance, muscular strength, muscular endurance, body composition, and flexibility.</p>
+            </div>  
+           </div>
+         </section>
+       </div>
+      </section>
+
+      <div class=" -mt-1">
+        <svg class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 90" fill="none">
+          <path d="M0 0H1440V89C1440 89 1331.72 11.2812 996.742 11.2812C828.405 11.2812 640.404 76.9119 309.594 89C142.032 95.1228 0 47.7031 0 47.7031V0Z" fill="#0D1337"/>
+          </svg>       
+        </div>
+
+        <!-- bg-white-sec-1 -->
+     <section  class=" pt-20  ">
+
+       <!-- Schedule-SECTION -->
+       <section class="container  text-gray-default">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-20 xl:gap-28 py-20">
+          
+          <div class="flex-col items-center lg:space-y-6 space-y-4 ">
+            <h5 class="uppercase font-base text-danger">Schedule </h5>
+            <h2 class="max-w-[16rem] md:text-[56px] text-[40px] leading-tight tracking-tight font-black ">
+              Classes Timetable</h2>
+              <p class="py-2 md:max-w-sm max-w-xs text-base font-normal leading-loose">
+                Involves attributes that include, but are not limited to mental acuity, cardiorespiratory endurance, muscular strength, muscular endurance.</p> 
+               <button class=" btn btn-danger"> Explore</button>
+            </div>
+            <div class="md:order-2 order-first">
+              <img src="https://images2.imgbox.com/36/06/UN0SvNwH_o.png" class="w-full h-full">
+            </div>
+        </div> 
+       </section>
+
+       <!-- GALLERY  -->
+
+       <section class="text-gray-default py-20">
+         <div  class="container text-center">
+           <div class="flex-col space-y-4 py-16">
+             <h5 class="uppercase text-danger font-base">Gallery </h5>
+             <h2 class="md:text-[56px] text-[40px] leading-tight tracking-tight font-black ">Our Gallery </h2>
+           <p class=" text-xl font-normal leading-loose px-10 lg:px-48 xl:px-64">Fitness is the condition of being physically fit and healthy and involves attributes that include.</p>
+         </div>
+
+         <div class="grid gap-5">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+            <div class="col-span-2">
+             <img src="https://images2.imgbox.com/f9/56/bgBJNBCh_o.png" alt="image host"/>
+            </div>
+            <div class="h-full"><img src="https://images2.imgbox.com/77/d0/pgtfL56h_o.png" alt="image host"/></div>
+            <div><img src="https://images2.imgbox.com/cb/66/Q1ssCzv2_o.png" alt="image host"/></div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-5 justify-items-stretch">
+            <div><img src="https://images2.imgbox.com/db/3a/73IJN6gI_o.png" alt="image host"/></div>
+            <div><img class="relative sm:-top-16 -top-8 md:-top-0"  src="https://images2.imgbox.com/95/c8/wpqTNAHB_o.png" alt="image host"/></div>
+            <div class="row-span-1"><img class="relative md:-top-6 sm:-top-16 -top-10" src="https://images2.imgbox.com/59/04/XUQzIRYG_o.png" alt="image host"/></div>
+            <div><img class="relative md:-top-16 lg:-top-20 xl:-top-24 sm:-top-16 -top-10" src="https://images2.imgbox.com/28/c0/PbETy0Iu_o.png" alt="image host"/></div>
+          </div>
+       </div>
+       <div class="py-16">
+        <button class=" btn btn-danger"> see more</button>
+       </div>
+      </div>
+       </section>
+
+       <!-- Fitness-img -->
+
+       <section class=" relative h-full md:h-[500px] w-full bg-cover no-repeat" style="background-image: url('https://images2.imgbox.com/f4/4f/ARKSubSC_o.png');">
+        <!-- <img src="https://images2.imgbox.com/f4/4f/ARKSubSC_o.png" class="w-full md:h-auto h-full py-10">  -->
+        <div class="container ">
+           <div class="absolute py-20 xl:top-10 md:top-20 top-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-36 lg:gap-28 lg:justify-items-end place-content-center items-center">
+             <div class="">
+              <h5 class="uppercase font-base pb-5">Fitness </h5>
+              <h2 class="max-w-md lg:text-[56px] text-[40px] leading-tight tracking-tight font-black ">
+                Be Productive For 
+                Everyday Living </h2>  
+             </div>
+             <div class=""><button class="btn btn-danger-dark">Get started</button></div>
+
+           </div>
+
+         </div>
+       </section>
+
+
+       <!-- TEAMS -->
+       <section>
+         <div class="container py-32 text-gray-default ">
+          <div class="flex-col space-y-4 text-center  py-10">
+            <h5 class="uppercase text-danger font-base">Our Team </h5>
+            <h2 class="md:text-[56px] text-[40px] leading-tight tracking-tight font-black">Professional Team </h2>
+          <p class=" text-xl font-normal leading-loose px-10 lg:px-36 xl:px-56">Attributes that include, but are not limited to mental acuity, cardiorespiratory endurance, muscular strength.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <img src="https://images2.imgbox.com/77/6a/Q497jzUw_o.png" alt="image host"/>
+            <h4 class=" pt-5 pb-4 text-2xl leading-tight tracking-tight font-black"> Salma Fonseca </h4>
+            <p class="text-sm text-gray-500">Outdoor Classes</p>
+
+          </div>
+          <div>
+            <img src="https://images2.imgbox.com/58/fa/i0LjNoPL_o.png" alt="image host"/>
+            <h4 class=" pt-5 pb-4 text-2xl leading-tight tracking-tight font-black"> Christian Russell </h4>
+            <p class="text-sm text-gray-500">Personal Training </p>
+
+          </div>
+          <div>
+           <img src="https://images2.imgbox.com/81/49/024RabdZ_o.png" alt="image host"/>
+            <h4 class=" pt-5 pb-4 text-2xl leading-tight tracking-tight font-black"> Indira Shree </h4>
+            <p class="text-sm text-gray-500">Group Training </p>
+          </div>
+        </div>
+        <div class="pt-16">
+         <img class="mx-auto" src="https://images2.imgbox.com/db/e0/hPwDSNsP_o.png" alt="image host"/>
+        </div>
+         </div>
+        </section>
+      </section>
+
+        <!-- USING SVG IMG -->
+   
+        <div class=" relative xl:top-[75px] lg:top-[65px] md:top-[60px] sm:top-[58px] top-[53px]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-full" height="92" viewBox="0 0 1440 71" fill="none">
+            <path d="M0 0H1440V71C1440 71 1341.72 18.9336 1106.16 14.6562C811.636 9.30838 690.755 56.0098 379.833 51.7496C137.677 48.4317 0 15.5 0 15.5V0Z" fill="white"/>
+            </svg>
+          <!-- <img src="https://images2.imgbox.com/66/73/2sjyAaPb_o.png" alt="image host" class="w-full"/> -->
+        </div>
+    
+    <!-- dark-sec-2 -->
+     <section class="">
+       <div class=" bg-blue-default no-repeat">
+        <div class="container py-20">
+          <div class="py-20 grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-28 lg:gap-14 items-center ">
+           <div>
+             <h4 class="pb-10 font-black text-[40px] tracking-tight leading-tight md:text-[20px] lg:text-[40px]">The condition of being physically fit and healthy and involves attributes that include</h4>
+             <p  class="text-base md:leading-tight leading-loose lg:leading-loose text-gray-500">Fitness is the condition of being physically fit and healthy and involves attributes that include, but are not limited to mental acuity, cardiorespiratory endurance.</p>
+              <div class="flex items-center space-x-5 pt-8">
+                  <img src="https://images2.imgbox.com/94/e4/5YklDhur_o.png" alt="image host"/>
+                  <div>
+                    <h2 class="text-xl font-black">Arina Belomestnykh</h2>
+                    <p class="text-gray-500 text-sm pt-2">Outdoor Classes</p>
+                  </div>
+              </div>
+            </div>
+           <img src="https://images2.imgbox.com/cc/1c/b42kUKEV_o.png" alt="image host"/>
+          </div>   
+          </div>
+
+
+          <div class="container py-20 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+            <div>
+              <div class="pb-8"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="24" viewBox="0 0 120 24" fill="none">
+                <path d="M12 18L4.94658 21.7082L6.29366 13.8541L0.587322 8.2918L8.47329 7.1459L12 0L15.5267 7.1459L23.4127 8.2918L17.7063 13.8541L19.0534 21.7082L12 18Z" fill="#F06E38"/>
+                <path d="M36 18L28.9466 21.7082L30.2937 13.8541L24.5873 8.2918L32.4733 7.1459L36 0L39.5267 7.1459L47.4127 8.2918L41.7063 13.8541L43.0534 21.7082L36 18Z" fill="#F06E38"/>
+                <path d="M60 18L52.9466 21.7082L54.2937 13.8541L48.5873 8.2918L56.4733 7.1459L60 0L63.5267 7.1459L71.4127 8.2918L65.7063 13.8541L67.0534 21.7082L60 18Z" fill="#F06E38"/>
+                <path d="M84 18L76.9466 21.7082L78.2937 13.8541L72.5873 8.2918L80.4733 7.1459L84 0L87.5267 7.1459L95.4127 8.2918L89.7063 13.8541L91.0534 21.7082L84 18Z" fill="#F06E38"/>
+                <path d="M108 18L100.947 21.7082L102.294 13.8541L96.5873 8.2918L104.473 7.1459L108 0L111.527 7.1459L119.413 8.2918L113.706 13.8541L115.053 21.7082L108 18Z" fill="#F06E38"/>
+                </svg></div>
+                <div>
+                <p  class="text-base md:leading-tight leading-loose lg:leading-loose text-gray-500">
+                  Condition of being physically fit and healthy and involves attributes that include, but are not limited to mental acuity.</p>                <div class="flex items-center space-x-5 pt-8">
+                    <img src="https://images2.imgbox.com/78/61/vSPlDAgb_o.png" alt="image host"/>
+                    <div>
+                      <h2 class="text-xl font-black">Joana Leite</h2>
+                      <p class="text-gray-500 text-sm pt-2">Personal Training</p>
+                    </div>
+                  </div>
+                </div>
+            </div>           
+             <div>
+              <div class="pb-8"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="24" viewBox="0 0 120 24" fill="none">
+                <path d="M12 18L4.94658 21.7082L6.29366 13.8541L0.587322 8.2918L8.47329 7.1459L12 0L15.5267 7.1459L23.4127 8.2918L17.7063 13.8541L19.0534 21.7082L12 18Z" fill="#F06E38"/>
+                <path d="M36 18L28.9466 21.7082L30.2937 13.8541L24.5873 8.2918L32.4733 7.1459L36 0L39.5267 7.1459L47.4127 8.2918L41.7063 13.8541L43.0534 21.7082L36 18Z" fill="#F06E38"/>
+                <path d="M60 18L52.9466 21.7082L54.2937 13.8541L48.5873 8.2918L56.4733 7.1459L60 0L63.5267 7.1459L71.4127 8.2918L65.7063 13.8541L67.0534 21.7082L60 18Z" fill="#F06E38"/>
+                <path d="M84 18L76.9466 21.7082L78.2937 13.8541L72.5873 8.2918L80.4733 7.1459L84 0L87.5267 7.1459L95.4127 8.2918L89.7063 13.8541L91.0534 21.7082L84 18Z" fill="#F06E38"/>
+                <path d="M108 18L100.947 21.7082L102.294 13.8541L96.5873 8.2918L104.473 7.1459L108 0L111.527 7.1459L119.413 8.2918L113.706 13.8541L115.053 21.7082L108 18Z" fill="#F06E38"/>
+                </svg></div>
+                <div>
+                <p  class="text-base md:leading-tight leading-loose lg:leading-loose text-gray-500">
+                  Condition of being physically fit and healthy and involves attributes that include, but are not limited to mental acuity.</p>                <div class="flex items-center space-x-5 pt-8">
+                    <img src="https://images2.imgbox.com/78/61/vSPlDAgb_o.png" alt="image host"/>
+                    <div>
+                      <h2 class="text-xl font-black">Joana Leite</h2>
+                      <p class="text-gray-500 text-sm pt-2">Personal Training</p>
+                    </div>
+                  </div>
+                </div>
+            </div>         
+            <div>
+              <div class="pb-8"><svg xmlns="http://www.w3.org/2000/svg" width="120" height="24" viewBox="0 0 120 24" fill="none">
+                <path d="M12 18L4.94658 21.7082L6.29366 13.8541L0.587322 8.2918L8.47329 7.1459L12 0L15.5267 7.1459L23.4127 8.2918L17.7063 13.8541L19.0534 21.7082L12 18Z" fill="#F06E38"/>
+                <path d="M36 18L28.9466 21.7082L30.2937 13.8541L24.5873 8.2918L32.4733 7.1459L36 0L39.5267 7.1459L47.4127 8.2918L41.7063 13.8541L43.0534 21.7082L36 18Z" fill="#F06E38"/>
+                <path d="M60 18L52.9466 21.7082L54.2937 13.8541L48.5873 8.2918L56.4733 7.1459L60 0L63.5267 7.1459L71.4127 8.2918L65.7063 13.8541L67.0534 21.7082L60 18Z" fill="#F06E38"/>
+                <path d="M84 18L76.9466 21.7082L78.2937 13.8541L72.5873 8.2918L80.4733 7.1459L84 0L87.5267 7.1459L95.4127 8.2918L89.7063 13.8541L91.0534 21.7082L84 18Z" fill="#F06E38"/>
+                <path d="M108 18L100.947 21.7082L102.294 13.8541L96.5873 8.2918L104.473 7.1459L108 0L111.527 7.1459L119.413 8.2918L113.706 13.8541L115.053 21.7082L108 18Z" fill="#F06E38"/>
+                </svg></div>
+                <div>
+                <p  class="text-base md:leading-tight leading-loose lg:leading-loose text-gray-500">
+                  Condition of being physically fit and healthy and involves attributes that include, but are not limited to mental acuity.</p>                <div class="flex items-center space-x-5 pt-8">
+                    <img src="https://images2.imgbox.com/78/61/vSPlDAgb_o.png" alt="image host"/>
+                    <div>
+                      <h2 class="text-xl font-black">Joana Leite</h2>
+                      <p class="text-gray-500 text-sm pt-2">Personal Training</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+          </div>
+
+          <!-- PRICING -->
+          <section class="container py-36">
+            <div class="text-center">
+              <h5 class="uppercase font-base pb-5">Pricing </h5>
+              <h2 class="lg:text-[56px] text-[40px] leading-tight tracking-tight font-black ">
+                Long-term Health <br>
+                <span>Benefits</span> </h2>  
+             </div>
+             <div class="grid gap-8 py-10">
+              <div class="bg-blue-light grid grid-cols-1 md:grid-cols-5 md:gap-2 lg:gap-4 items-center md:justify-items-center justify-items-start">
+                <img class="w-full h-full" src="https://images2.imgbox.com/66/1c/GcXiHItV_o.png" alt="image host"/>
+                <div class="col-span-2  py-5 px-5">
+                  <h4 class=" text-2xl font-black pb-5">One Day </h4>
+                  <p class="leading-loose ">Fitness is the condition of being physically fit and healthy and involves attributes that include, but are not limited.</p>
+                </div>
+                <div class=" md:py-0 px-5 md:mb-0 mb-5 col-span-2 flex items-center space-x-5">
+                  <h class="font-black lg:text-[56px] text-[40px]">$7</h>
+                  <button class="btn btn-danger-dark">buy now</button>
+                </div>
+
+               </div>  
+               <div class="bg-blue-light grid grid-cols-1 md:grid-cols-5 md:gap-2 lg:gap-4 items-center md:justify-items-center justify-items-start">
+                <img class="w-full h-full" src="https://images2.imgbox.com/66/1c/GcXiHItV_o.png" alt="image host"/>
+                <div class="col-span-2  py-5 px-5">
+                  <h4 class=" text-2xl font-black pb-5">One Day </h4>
+                  <p class="leading-loose ">Fitness is the condition of being physically fit and healthy and involves attributes that include, but are not limited.</p>
+                </div>
+                <div class=" md:py-0 px-5 md:mb-0 mb-5 col-span-2 flex items-center space-x-5">
+                  <h class="font-black lg:text-[56px] text-[40px]">$7</h>
+                  <button class="btn btn-danger-dark">buy now</button>
+                </div>
+
+               </div>            
+                <div class="bg-blue-light grid grid-cols-1 md:grid-cols-5 md:gap-2 lg:gap-4 items-center md:justify-items-center justify-items-start">
+                <img class="w-full h-full" src="https://images2.imgbox.com/66/1c/GcXiHItV_o.png" alt="image host"/>
+                <div class="col-span-2  py-5 px-5">
+                  <h4 class=" text-2xl font-black pb-5">One Day </h4>
+                  <p class="leading-loose ">Fitness is the condition of being physically fit and healthy and involves attributes that include, but are not limited.</p>
+                </div>
+                <div class=" md:py-0 px-5 md:mb-0 mb-5 col-span-2 flex items-center space-x-5">
+                  <h class="font-black lg:text-[56px] text-[40px]">$7</h>
+                  <button class="btn btn-danger-dark">buy now</button>
+                </div>
+               </div>
+             </div>
+          </section>
+          
+          <!-- Blog -->
+          <section class="container pb-28 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 xl:gap-20 py-24">
+              <div class="flex-col items-center lg:space-y-5 space-y-4 ">
+                <h5 class="uppercase font-base">Blog </h5>
+                <h2 class=" lg:text-[56px] text-[40px] leading-tight tracking-tight font-black ">Latest Blog <br>
+                   <span>& Articles</span></h2>
+                  <p class="py-2 md:max-w-sm max-w-xs text-base font-normal leading-loose">
+                    Healthy and involves attributes that include, but are not limited to mental acuity, cardiorespiratory endurance, muscular strength, muscular.</p>                    
+                    <button class=" btn btn-white">All Articles</button>
+                </div>
+                <div class="bg-cover no-repeat p-10 h-full" style="background-image: url('https://images2.imgbox.com/7d/ce/6wRHvHgT_o.png');">
+                  <!-- <img src="https://images2.imgbox.com/7d/ce/6wRHvHgT_o.png" class="w-full h-full"> -->
+                  <div class="grid gap-36">
+                    <div>
+                      <p class="text-base text-gray-500">20 Jun, 2021</p>
+                    </div>
+                    <div class="justify-self-end	">
+                      <h4 class="text-[40px] font-black leading-snug">Fitness is the condition of being physically fit</h4>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+              <div>
+                <img src="https://images2.imgbox.com/f1/18/2T7p0Atq_o.png" alt="image host"/>
+                <p class="text-sm text-gray-500 py-5">19 Jun, 2021</p>
+                <h4 class=" text-2xl leading-tight tracking-tight font-black xl:pr-5 pr-1">Attributes that include, but are not limited </h4>
+              </div>
+              <div>
+                <img src="https://images2.imgbox.com/18/74/GxQvINag_o.png" alt="image host"/>
+                <p class="text-sm text-gray-500 py-5">19 Jun, 2021</p>
+                <h4 class=" text-2xl leading-tight tracking-tight font-black  xl:pr-5 pr-1">Attributes that include, but are not limited </h4>
+              </div>
+              <div>
+                <img src="https://images2.imgbox.com/f1/18/2T7p0Atq_o.png" alt="image host"/>
+                <p class="text-sm text-gray-500 py-5">19 Jun, 2021</p>
+                <h4 class=" text-2xl leading-tight tracking-tight font-black xl:pr-5 pr-1">Attributes that include, but are not limited </h4>
+              </div>
+            </div>
+           </section>
+            
+           <!-- map-sec -->
+           <section class="py-20">
+            <img class="w-full" src="https://images2.imgbox.com/6c/8e/uf9wEivD_o.png" alt="image host"/>
+           </section>
+
+           <!-- CONTACT -->
+           <section class="container py-10">
+             <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-10 md:gap-7 gap-6 items-center">
+               <div class="flex-col space-y-4">
+                <h5 class="uppercase font-base">Get In Touch </h5>
+                <h2 class=" lg:text-[40px] md:text-3xl text-[40px] font-black ">Contact Us</h2>
+                <div class="flex space-x-4 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.57615 0.675562C4.99757 0.252968 4.28407 0 3.51012 0C1.58265 0 0.0199755 1.54831 0.0199755 3.45802C0.0199755 3.92743 0.115196 4.37472 0.286446 4.78267C1.35797 2.75084 3.27662 1.23084 5.57615 0.675562ZM12.8481 13.7077C14.1778 12.3671 15 10.5304 15 8.50216C15 4.39813 11.6422 1.07147 7.5 1.07147C3.35784 1.07147 0 4.39789 0 8.50216C0 10.5307 0.822475 12.3671 2.15216 13.708L1.47368 14.38C1.09956 14.7507 1.09956 15.3511 1.47343 15.7218C1.66025 15.9072 1.90569 16 2.15059 16C2.39549 16 2.64071 15.9072 2.8275 15.7221L3.67306 14.8846C4.79417 15.5463 6.1 15.9331 7.5 15.9331C8.9 15.9331 10.2058 15.5463 11.3275 14.8843L12.173 15.7221C12.3601 15.9072 12.605 16 12.8499 16C13.0948 16 13.3403 15.9072 13.5271 15.7218C13.901 15.3512 13.901 14.7507 13.5268 14.38L12.8481 13.7077ZM7.49973 12.8733C7.23328 12.8733 7.0174 13.0876 7.0174 13.3517V13.9959C4.3313 13.7658 2.18718 11.6414 1.95522 8.98027H2.60542C2.87189 8.98027 3.08826 8.76589 3.08826 8.50214C3.08826 8.23814 2.87186 8.02403 2.60542 8.02403H1.95522C2.18718 5.3629 4.3313 3.23825 7.0174 3.00869V3.65314C7.0174 3.91716 7.23328 4.13103 7.49973 4.13103C7.7662 4.13103 7.9823 3.91716 7.9823 3.65314V3.00869C10.6684 3.23825 12.8123 5.36287 13.0445 8.02403H12.394C12.1276 8.02403 11.9115 8.23814 11.9115 8.50214C11.9115 8.76589 12.1276 8.98027 12.394 8.98027H13.0445C12.8125 11.6414 10.6687 13.7658 7.98257 13.9959V13.3519C7.98257 13.0877 7.76645 12.8733 7.49973 12.8733ZM10.2951 9.21937H8.55544C8.32453 9.55175 7.93846 9.77077 7.49951 9.77055C6.79223 9.77055 6.21912 9.20293 6.21912 8.50194C6.21912 8.34898 6.25076 8.20424 6.30083 8.06852L4.71402 5.85569C4.48257 5.53281 4.55887 5.08525 4.88473 4.85545C5.21059 4.62589 5.66257 4.70173 5.89426 5.02486L7.47951 7.23562C7.48245 7.2354 7.48522 7.23496 7.48797 7.23452L7.48798 7.23452L7.48799 7.23452C7.49178 7.23391 7.49555 7.23331 7.49975 7.23331C7.93848 7.23331 8.32456 7.45233 8.5552 7.78471H10.2951C10.6949 7.78471 11.0189 8.10604 11.0189 8.50216C11.0189 8.89828 10.6949 9.21937 10.2951 9.21937ZM14.9797 3.45804C14.9797 3.92719 14.8845 4.37448 14.7133 4.7827C13.6418 2.75137 11.7231 1.23109 9.42385 0.676096C10.0024 0.252968 10.7154 0 11.4899 0C13.4173 0 14.98 1.54831 14.9797 3.45804Z" fill="#F06E38"/>
+                    </svg>
+                  <p class="text-gray-500">Mon - Sat 8.00 - 18.00</p>
+                </div>
+               </div>
+               <div  class="flex-col space-y-6 bg-blue-light  lg:px-5 md:px-2 px-8 py-8 lg:py-8  md:py-14">
+                 <p class="text-gray-500">Address</p>
+                 <div class="flex space-x-4 md:space-x-1 lg:space-x-4 items-center">
+                  <img  class="lg:w-11 lg:h-11 w-11 h-11 md:w-7 md:h-7" src="https://images2.imgbox.com/8c/06/HotL7Dlh_o.png" alt="image host"/>   
+                    <p class="text-gray-500 lg:text-base text-base md:text-sm md:leading-none lg:leading-normal leading-normal tracking-tight">8286 North Division Drive
+                    Waxhaw, NC 28173</p>
+                </div>
+
+               </div>
+               <div  class="flex-col space-y-6 bg-blue-light  lg:px-5 md:px-2 px-8  py-8  lg:py-8 md:py-14">
+                 <p class="text-gray-500">Address</p>
+                 <div class="flex space-x-4 md:space-x-1 lg:space-x-4 items-center">
+                  <img class="lg:w-11 lg:h-11 w-11 h-11 md:w-7 md:h-7"src= "https://images2.imgbox.com/ca/42/6bFLdDcR_o.png" alt="image host"/>   
+                    <p class="text-gray-500 lg:text-base text-base md:text-sm md:leading-none lg:leading-normal leading-normal tracking-tight">+1 (234) 567-89-00 </p>
+                </div>
+               </div>
+             </div>
+           </section>
+
+
+           <section class="py-28">
+            <div class="container bg-danger ">
+              <div
+                class="
+                  grid grid-cols-1
+                  md:grid-cols-2
+                  gap-6 lg:gap-10 xl:gap-20
+                  py-20
+                  justify-between
+                  items-center
+                "
+              >
+                <div class="flex flex-col justify-between space-y-8">
+                    <h5 class="uppercase font-display font-base">Fitness</h5>
+                      <h2 class="text-[40px] lg:text-[56px]  tracking-tight leading-tight font-black max-w-xs 
+                      md:max-w-md">Giving You The 
+                      Body You Want</h2>
+                    <p class="text-xl leading-relaxed max-w-lg">
+                      Condition of being physically fit and healthy and involves attributes that include.</p>
+                   <button
+                    class="btn btn-dark mt-10">
+                    Get Started            </button>
+                  </div>
+                 
+                 <div class="md:order-2 order-first">
+                  <img src="https://images2.imgbox.com/77/2a/auLMfzxt_o.png" alt="pic-2" border="0">          
+                 </div>
+                </div>
+              </div>
+           </section>
+
+           <section>
+             <div class="grid grid-cols-1 md:grid-cols-6 gap-0">
+              <img class="w-full" src="https://thumbs2.imgbox.com/02/51/ap3nDQWQ_t.png" alt="image host"/>
+              <img class="w-full"  src="https://thumbs2.imgbox.com/02/51/ap3nDQWQ_t.png" alt="image host"/>
+              <img class="w-full"  src="https://thumbs2.imgbox.com/02/51/ap3nDQWQ_t.png" alt="image host"/>
+              <img class="w-full"  src="https://thumbs2.imgbox.com/02/51/ap3nDQWQ_t.png" alt="image host"/>
+              <img class="w-full"  src="https://thumbs2.imgbox.com/02/51/ap3nDQWQ_t.png" alt="image host"/>
+              <img class="w-full"  src="https://thumbs2.imgbox.com/02/51/ap3nDQWQ_t.png" alt="image host"/>
+             </div>
+           </section>
+          </div>
+     </section>
+
+
+     <!-- FOOTER -->
+
+   <section class=" ">
+    <div class="container mt-16 text-gray-default">
+      <div class="grid grid-cols-1 md:grid-cols-4 pb-10">
+
+                    <div  class="px-8">
+                        <h1 class="text-[56px] font-black" >FTN</h1>
+                    </div>
+
+                    <div class="md:pl-20 pl-16">
+                        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 my-5">
+                            <h5 class="md:p-2 uppercase text-danger text-xl pb-8">Menu</h5>
+                            <div class="md:p-2 py-1">About</div>
+                            <div class="md:p-2 py-1">Pricing</div>
+                            <div class="md:p-2  py-1">BLog</div>
+                            <div class="md:p-2 py-1">Contact</div>
+                        </div>
+                    </div>
+                    <div class="md:pl-20 pl-16">
+                        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 my-5">
+                            <h5 class="md:p-2 uppercase text-danger text-xl pb-8">Service</h5>
+                            <div class="md:p-2 py-1 ">Outdoor Classes</div>
+                            <div class="md:p-2 py-1 ">personal Training</div>
+                            <div class="md:p-2 py-1 ">Group Training</div>
+                            <div class="md:p-2 py-1">See More</div>
+                        </div>
+                    </div>
+                    <div class=" pl-16">
+                            <div class="py-5">
+                              <img src="https://images2.imgbox.com/28/4c/shwUuKzw_o.png" alt="social" border="0">
+                            </div>
+                    </div>
+                </div>
+
+                <hr class="text-gray-200" style="border: '0.5px solid'"  />
+
+                <footer class=" flex md:flex-row flex-col md:py-10 lg:py-10 py-8">
+
+                    <div class="flex-1 bd-highlight px-10">
+                        <div class="leading-loose flex-grow-1 bd-highlight text-gray-500">
+                            Copyright © 2020. All Rights Reserved.
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row md:flex-row md:px-24 px-8 py-5 md:py-0 justify-between">
+                        <p class=" tracking-tighter" >Terms of Use</p>
+                        <p class="   md:pl-10 pl-32 tracking-tighter">Privacy Policy</p>
+                    </div>
+                </footer>
+
+            </div>
+          </section>
+
+  
+
+ </body>
+</html>
